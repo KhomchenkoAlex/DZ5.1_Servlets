@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.time.LocalDateTime;
 
-@WebServlet("/s")
+@WebServlet("/guestbook")
 public class HomePageServlet extends HttpServlet {
     GuestBook guestBook = new GuestBook();
 
@@ -27,7 +27,7 @@ public class HomePageServlet extends HttpServlet {
 
         LocalDateTime time = LocalDateTime.now();
         String name = request.getParameter("name");
-        String rating = request.getParameter("rating");
+        int rating = Integer.parseInt(request.getParameter("rating"));
         String message = request.getParameter("message");
         guestBook.putGuestBookEntry(time, name, message, rating);
         request.setAttribute("entries", guestBook.getGuestBookMap());

@@ -24,7 +24,7 @@
 </form>
 
 <c:forEach items="${entries}" var="entry">
-    <c:out value="${entry.value}"/>
+    <c:out value="${entry.value.toString()}"/>
     <c:out value="${entry.key}"/> <br/>
 </c:forEach>
 
