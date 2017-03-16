@@ -23,10 +23,22 @@
     <input type="submit">
 </form>
 
+<table border="1" width="25" align="center">
+    <caption>Number of guests</caption>
+    <tbody>
+    <tr>
+        <td align="center" height="25">${num}</td>
+    </tr>
+    </tbody>
+</table>
+
 <c:forEach items="${entries}" var="entry">
     <c:out value="${entry.value.toString()}"/>
     <c:out value="${entry.key}"/> <br/>
 </c:forEach>
+
+
+
 
 </body>
 </html>
